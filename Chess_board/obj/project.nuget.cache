@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/cgbZmr33tFzp6w6bB3aG4pZLbG8vhIWaUSsTTXwAyoEInF+/IjGz02JT6/u7DmVKmiyets5irmdvqbZTSVJMw==",
+  "dgSpecHash": "TYrBkH1qhQesDtd0GMU5ZLyCtkoHMoL2u7Uay63KcABeijO0e/OX6i3/cP7wLPyKF5/SlWWG7o+RgKN1pdAcIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\raj68\\Desktop\\Mariusz C#\\move_chess\\Chess_board\\Chess_board.csproj",
+  "projectFilePath": "C:\\Users\\mariu\\Desktop\\programowanie\\Mariusz C#\\move_chess\\Chess_board\\Chess_board.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\raj68\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\raj68\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\mariu\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\mariu\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

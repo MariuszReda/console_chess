@@ -1,54 +1,104 @@
 ﻿using Chess_board;
 using System;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 
 namespace move_chess
 {
     class Program
     {
         static ChessBoardModel2 myBoard = new ChessBoardModel2(8);
+
         static void Main(string[] args)
         {
-            //generuje pusta plansze
+            Console.WriteLine("X- the position of the piece on the board, + legal moves marked");
+            //generate empty chess board
             printBoard(myBoard);
-            
-            //spytaj o cordy X Y uzytkownika gdzie chcesz polozyc pionek
-            
+            //ask the user's X Y cordy where you want to put the pawn
             Cell currentCell = SetCurentCell();
             currentCell.curentlyBusy = true;
 
-            //sprawdz wszystkie dozwolone ruchy 
-            myBoard.MarkNextLegalMove(currentCell, "Rook");
+
+          
+            string Piece = Console.ReadLine();
+            string Choice = Piece.ToUpper();
+            myBoard.MarkNextLegalMove(currentCell, Choice);
 
 
             printBoard(myBoard);
             Console.ReadLine();
         }
 
-        private static Cell SetCurentCell()
+        
+        public static Cell SetCurentCell()
         {
-            //pobierz coord X i Y z klawiatury, zwraca wartosc do class Cell 
-            Console.WriteLine("Enter the current number in row");
-            int currentRow = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the current number in colums");
-            int currentColumn = int.Parse(Console.ReadLine());
-            //bug przy wyjsciu z planszy [...] +
-            //bug przy wczytwaniu stringu [...]
-            //bug przy wczytywaniu zbyt duzych wartosci [...]
-            //uzupelnic reszte figur[...]
-            //poprawic tablice[...]
+            
+
+
+
+            var currentRow = 0;
+            var currentColumn = 0;
+
+            // throwing an exception
+            {
+               ;
+                try
+                {
+                   // ChessBoardModel2 myBoard;
+                    do
+                    {
+                        Console.WriteLine("Enter the current number in row: 1-8");
+
+
+                        currentRow = Convert.ToInt32(Console.ReadLine());
+                        currentRow = currentRow - 1;
+                    } while (currentRow >=  8 || currentRow < 0); ;
+
+
+
+
+
+
+
+                    do
+                    {
+                        Console.WriteLine("Enter the current number in colums: 1-8");
+
+                        currentColumn = Convert.ToInt32(Console.ReadLine());
+                        currentColumn = currentColumn - 1;
+                    } while (currentColumn >= 8 || currentColumn < 0);
+                        
+                }
+          
+                catch (FormatException)
+                {
+                 Console.WriteLine("Error occurred");
+
+                }
+
+          
+            } 
+            Console.WriteLine("What kind of chess piece would you like to place ont the board? Knight, King, Queen, Rook, Bishop");
+           
+            
+           
+
+
+
             return myBoard.theGrid[currentRow, currentColumn];
+            
 
         }
 
-        private static void printBoard(ChessBoardModel2 myBoard)
+       private static void printBoard(ChessBoardModel2 myBoard)
         {
+
             for (int k = 0; k < 1; k++)
             {
-                Console.WriteLine("=========================================================="); // dopracowac [...]
+                Console.WriteLine("=========================================================="); 
             }
-                //generuje szachownice w konsoli, X jako lokalizacja elementu, dla prawdiłowego ruchu, i pustych pól
-                for (int i = 0; i < myBoard.Size; i++)
+            //generates checkerboards
+            for (int i = 0; i < myBoard.Size; i++)
                 {
 
                     for (int j = 0; j < myBoard.Size; j++)

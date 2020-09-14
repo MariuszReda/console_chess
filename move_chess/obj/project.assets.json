@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\raj68\\.nuget\\packages\\": {}
+    "C:\\Users\\mariu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\raj68\\Desktop\\Mariusz C#\\move_chess\\move_chess\\move_chess.csproj",
+      "projectUniqueName": "C:\\Users\\mariu\\Desktop\\programowanie\\Mariusz C#\\move_chess\\move_chess\\move_chess.csproj",
       "projectName": "move_chess",
-      "projectPath": "C:\\Users\\raj68\\Desktop\\Mariusz C#\\move_chess\\move_chess\\move_chess.csproj",
-      "packagesPath": "C:\\Users\\raj68\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\raj68\\Desktop\\Mariusz C#\\move_chess\\move_chess\\obj\\",
+      "projectPath": "C:\\Users\\mariu\\Desktop\\programowanie\\Mariusz C#\\move_chess\\move_chess\\move_chess.csproj",
+      "packagesPath": "C:\\Users\\mariu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mariu\\Desktop\\programowanie\\Mariusz C#\\move_chess\\move_chess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\raj68\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mariu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -52,8 +52,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\raj68\\Desktop\\Mariusz C#\\move_chess\\Chess_board\\Chess_board.csproj": {
-              "projectPath": "C:\\Users\\raj68\\Desktop\\Mariusz C#\\move_chess\\Chess_board\\Chess_board.csproj"
+            "C:\\Users\\mariu\\Desktop\\programowanie\\Mariusz C#\\move_chess\\Chess_board\\Chess_board.csproj": {
+              "projectPath": "C:\\Users\\mariu\\Desktop\\programowanie\\Mariusz C#\\move_chess\\Chess_board\\Chess_board.csproj"
             }
           }
         }
@@ -81,7 +81,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

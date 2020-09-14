@@ -7,14 +7,19 @@ namespace Chess_board
 {
     public class ChessBoardModel2
     {
-        public int Size { get; set; } 
-
+        //the size of the board usually (8x8)
+        public int Size { get; set; }
+        //array 2D of type Cell
         public Cell[,] theGrid { get; set; } 
 
+        //Constructor
         public ChessBoardModel2(int s) 
         {
+            //initial size of the board defines s
             Size = s;
+            //creat new 2D array of typ Cell
             theGrid = new Cell[Size, Size];
+            //fill the 2d array with new cell each with unique coord
             for (int i = 0; i < Size; i++)
             {
                 for (int j = 0; j < Size; j++)
@@ -24,7 +29,7 @@ namespace Chess_board
                 }
             }
         }
-        
+        //function to check it is (safe)legal moves
         private bool isSafe(int x, int y) 
         { 
            
@@ -33,7 +38,7 @@ namespace Chess_board
                 
                 return true;
             }
-            //Console.WriteLine("error");  <--- bug [...]
+            
             return false;
         }
      
@@ -41,6 +46,7 @@ namespace Chess_board
         
         public void MarkNextLegalMove(Cell currentCell, string chessPiece)
         {
+            //clear all previous legal move
             for (int f = 0; f < Size; f++)
             {
                 for (int j = 0; j < Size; j++)
@@ -49,9 +55,10 @@ namespace Chess_board
                     theGrid[f, j].curentlyBusy = false;
 
                 }
+                // all legal combat moves piece
                 switch (chessPiece)
                 {
-                    case "Knight":
+                    case "KNIGHT":
                         if (isSafe(currentCell.rowNumber + 2, currentCell.columnNumber + 1))
                         {
                             theGrid[currentCell.rowNumber + 2, currentCell.columnNumber + 1].legalMove = true;
@@ -84,13 +91,46 @@ namespace Chess_board
                         {
                             theGrid[currentCell.rowNumber - 1, currentCell.columnNumber - 2].legalMove = true;
                         }
-                        
-                            break;
-                        
-                    case "King":
-                       
+
                         break;
-                    case "Rook":
+
+                    case "KING":
+
+                        int j = 1;
+                        if (isSafe(currentCell.rowNumber + j, currentCell.columnNumber))
+                        {
+                            theGrid[currentCell.rowNumber + j, currentCell.columnNumber].legalMove = true;
+                        }
+                        if (isSafe(currentCell.rowNumber - j, currentCell.columnNumber))
+                        {
+                            theGrid[currentCell.rowNumber - j, currentCell.columnNumber].legalMove = true;
+                        }
+                        if (isSafe(currentCell.rowNumber + j, currentCell.columnNumber + j))
+                        {
+                            theGrid[currentCell.rowNumber + j, currentCell.columnNumber + j].legalMove = true;
+                        }
+                        if (isSafe(currentCell.rowNumber + j, currentCell.columnNumber - j))
+                        {
+                            theGrid[currentCell.rowNumber + j, currentCell.columnNumber - j].legalMove = true;
+                        }
+                        if (isSafe(currentCell.rowNumber, currentCell.columnNumber + j))
+                        {
+                            theGrid[currentCell.rowNumber, currentCell.columnNumber + j].legalMove = true;
+                        }
+                        if (isSafe(currentCell.rowNumber, currentCell.columnNumber - j))
+                        {
+                            theGrid[currentCell.rowNumber, currentCell.columnNumber - j].legalMove = true;
+                        }
+                        if (isSafe(currentCell.rowNumber - j, currentCell.columnNumber + j))
+                        {
+                            theGrid[currentCell.rowNumber - j, currentCell.columnNumber + j].legalMove = true;
+                        }
+                        if (isSafe(currentCell.rowNumber - j, currentCell.columnNumber - j))
+                        {
+                            theGrid[currentCell.rowNumber - j, currentCell.columnNumber - j].legalMove = true;
+                        }
+                        break;
+                    case "ROOK":
                         for (int i = 0; i <= Size; i++)
                         {
                             if (isSafe(currentCell.rowNumber + i, currentCell.columnNumber))
@@ -110,10 +150,82 @@ namespace Chess_board
                                 theGrid[currentCell.rowNumber, currentCell.columnNumber + i].legalMove = true;
                             }
                         }
-                            break;
-                    case "Bishop":
+                      
+                            
                         break;
-                    case "Queen":
+                    case "BISHOP":
+                        for (int i = 0; i <= Size; i++)
+                        {
+
+
+                            if (isSafe(currentCell.rowNumber + i, currentCell.columnNumber + i))
+                            {
+                                theGrid[currentCell.rowNumber + i, currentCell.columnNumber + i].legalMove = true;
+                            }
+                            if (isSafe(currentCell.rowNumber - i, currentCell.columnNumber + i))
+                            {
+                                theGrid[currentCell.rowNumber - i, currentCell.columnNumber + i].legalMove = true;
+                            }
+                            if (isSafe(currentCell.rowNumber + i, currentCell.columnNumber - i))
+                            {
+                                theGrid[currentCell.rowNumber + i, currentCell.columnNumber - i].legalMove = true;
+                            }
+                            if (isSafe(currentCell.rowNumber - i, currentCell.columnNumber - i))
+                            {
+                                theGrid[currentCell.rowNumber - i, currentCell.columnNumber - i].legalMove = true;
+                            }
+
+                        }
+                        
+
+
+                        break;
+
+
+                    case "QUEEN":
+                        for (int i = 0; i <= Size; i++)
+                        {
+
+
+                            if (isSafe(currentCell.rowNumber + i, currentCell.columnNumber + i))
+                            {
+                                theGrid[currentCell.rowNumber + i, currentCell.columnNumber + i].legalMove = true;
+                            }
+                            if (isSafe(currentCell.rowNumber - i, currentCell.columnNumber + i))
+                            {
+                                theGrid[currentCell.rowNumber - i, currentCell.columnNumber + i].legalMove = true;
+                            }
+                            if (isSafe(currentCell.rowNumber + i, currentCell.columnNumber - i))
+                            {
+                                theGrid[currentCell.rowNumber + i, currentCell.columnNumber - i].legalMove = true;
+                            }
+                            if (isSafe(currentCell.rowNumber - i, currentCell.columnNumber - i))
+                            {
+                                theGrid[currentCell.rowNumber - i, currentCell.columnNumber - i].legalMove = true;
+                            }
+
+                        }
+                        for (int i = 0; i <= Size; i++)
+                        {
+                            if (isSafe(currentCell.rowNumber + i, currentCell.columnNumber))
+                            {
+                                theGrid[currentCell.rowNumber + i, currentCell.columnNumber].legalMove = true;
+                            }
+                            if (isSafe(currentCell.rowNumber - i, currentCell.columnNumber))
+                            {
+                                theGrid[currentCell.rowNumber - i, currentCell.columnNumber].legalMove = true;
+                            }
+                            if (isSafe(currentCell.rowNumber, currentCell.columnNumber - i))
+                            {
+                                theGrid[currentCell.rowNumber, currentCell.columnNumber - i].legalMove = true;
+                            }
+                            if (isSafe(currentCell.rowNumber, currentCell.columnNumber + i))
+                            {
+                                theGrid[currentCell.rowNumber, currentCell.columnNumber + i].legalMove = true;
+                            }
+                        }
+
+
                         break;
 
                     default:
@@ -123,11 +235,7 @@ namespace Chess_board
                 }
                 theGrid[currentCell.rowNumber, currentCell.columnNumber].curentlyBusy = true;
             }
-            // bool ifSafe(int x, int y)
-            // {
-            //     ifConsole.WriteLine("error");
-            //         return true;
-            // }
+
         }
 
 

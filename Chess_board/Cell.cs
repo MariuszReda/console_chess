@@ -6,11 +6,12 @@ namespace Chess_board
 {
     public class Cell
     {
-        public int rowNumber { get; set; } //numer wiersza
-        public int columnNumber { get; set; } // numer kolumny
+        
+        public int rowNumber { get; set; } //numeber of row
+        public int columnNumber { get; set; } // number of column
 
-        public bool curentlyBusy { get; set; }  //pole zajete
-        public bool legalMove { get; set; } // dozwolony ruch
+        public bool curentlyBusy { get; set; }  // field occupied
+        public bool legalMove { get; set; } // check if move is legal
 
 
         public Cell(int x, int y)

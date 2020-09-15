@@ -1,10 +1,8 @@
-#Emulation chess piece
+#Console_chess
+##Emulation chess piece
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Chess_board
+```cs
+##namespace Chess_board
 {
     // ===========================
     //
@@ -15,8 +13,10 @@ namespace Chess_board
     //  like table of contents
     //
     // ===========================
+	}
+
     public class Cell
-    {
+	 {
         // ===========================
         //
         //  Squares X i Y
@@ -63,59 +63,4 @@ namespace Chess_board
         }
     }
 }
-
-using Chess_board;
-using System;
-using System.Drawing;
-using System.Runtime.CompilerServices;
-
-namespace move_chess
-class Program
-{
-    //================================
-    //
-    //static void Main(string[] args)
-    //--------------------------------
-    //generate chess board
-    //if with values get result
-    //if null wait for next step
-    //
-    // get the cords and check if the number typed from the keyboard
-    // result if correct returns to the array
-    //
-    //================================
-    private static void printBoard(ChessBoardModel2 myBoard)
-    public static Cell SetCurentCell()
-
-}
-
-using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Text;
-
-namespace Chess_board
-
-{
-    //================================
-    //
-    //public ChessBoardModel2
-    //--------------------------------
-    //creat object new 2D array of typ Cell
-    //
-    //================================
-    public class ChessBoardModel
-
-    //================================
-    //
-    //mark the legal moves
-    //and check that it does not exceed array
-    //--------------------------------
-    //clear all previous legal move
-    //next check legal moves for selection
-    //get coord theGrid
-    //display moves not larger than the size of the array
-    //==================================
-    public void MarkNextLegalMove(Cell currentCell, string chessPiece)
-    private bool isSafe(int x, int y)
-}
+```

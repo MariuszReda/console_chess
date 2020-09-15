@@ -114,3 +114,4 @@ class Program
     private bool isSafe(int x, int y)
 }
 ```
+![all text](https://ibb.co/1qpkTrh)

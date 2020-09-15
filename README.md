@@ -64,3 +64,53 @@
     }
 }
 ```
+##Main
+```cs
+namespace move_chess
+
+class Program
+{
+    //================================
+    //
+    //static void Main(string[] args)
+    //--------------------------------
+    //generate chess board
+    //if with values get result
+    //if null wait for next step
+    //
+    // get the cords and check if the number typed from the keyboard
+    // result if correct returns to the array
+    //
+    //================================
+    private static void printBoard(ChessBoardModel2 myBoard)
+    public static Cell SetCurentCell()
+
+}
+```
+
+##namespace Chess_board
+```cs
+{
+    //================================
+    //
+    //public ChessBoardModel2
+    //--------------------------------
+    //creat object new 2D array of typ Cell
+    //
+    //================================
+    public class ChessBoardModel
+
+    //================================
+    //
+    //mark the legal moves
+    //and check that it does not exceed array
+    //--------------------------------
+    //clear all previous legal move
+    //next check legal moves for selection
+    //get coord theGrid
+    //display moves not larger than the size of the array
+    //==================================
+    public void MarkNextLegalMove(Cell currentCell, string chessPiece)
+    private bool isSafe(int x, int y)
+}
+```

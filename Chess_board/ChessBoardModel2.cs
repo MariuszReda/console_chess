@@ -9,6 +9,7 @@ namespace Chess_board
     {
         //the size of the board usually (8x8)
         public int Size { get; set; }
+        //object theGrid
         //array 2D of type Cell
         public Cell[,] theGrid { get; set; } 
 
@@ -17,7 +18,7 @@ namespace Chess_board
         {
             //initial size of the board defines s
             Size = s;
-            //creat new 2D array of typ Cell
+            //creat object new 2D array of typ Cell
             theGrid = new Cell[Size, Size];
             //fill the 2d array with new cell each with unique coord
             for (int i = 0; i < Size; i++)
@@ -43,7 +44,7 @@ namespace Chess_board
         }
      
     
-        
+        //public method MarkNextLegalMove
         public void MarkNextLegalMove(Cell currentCell, string chessPiece)
         {
             //clear all previous legal move

@@ -115,6 +115,6 @@ class Program
 }
 ```
 <a href="https://ibb.co/1qpkTrh"><img src="https://i.ibb.co/MVjm7cW/ss1.png" alt="ss1" border="0"></a>
-<a href="https://ibb.co/0XLLT5q"><img src="https://i.ibb.co/b3VVTt1/ss2.png" alt="ss2" border="0"></a><br /><a target='_blank' href='https://pl.imgbb.com/'>darmowe foto</a><br />
+<a href="https://ibb.co/0XLLT5q"><img src="https://i.ibb.co/b3VVTt1/ss2.png" alt="ss2" border="0"></a>
 <a href="https://ibb.co/zPzRhKJ"><img src="https://i.ibb.co/L93tz45/ss3.png" alt="ss3" border="0"></a>
 <a href="https://ibb.co/gzprRbW"><img src="https://i.ibb.co/1850mYX/ss4.png" alt="ss4" border="0"></a>
